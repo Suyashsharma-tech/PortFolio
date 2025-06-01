@@ -1,178 +1,137 @@
-/* Full height + flex layout */
-html, body {
-  height: 100%;
+/* Reset & Global */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: #ff9100;
+  color: #333;
+}
+
+/* Header container */
+header {
+  padding: 20px;
+  background-color: #ff9100;
+  border-bottom: 1px solid #eee;
+}
+
+header > div:first-child {
   display: flex;
-  flex-direction: column;
-  background-color: rgb(56, 71, 60);
-  font-family: Arial, sans-serif;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-/* Header table style */
-.two {
-  background-color: rgb(34, 34, 34);
-  width: 100%;
-  height: 150px;
+header img {
+  height: 40px;
 }
 
-td {
-  text-align: center;
-  color: white;
-}
-
-.Suyash {
-  text-align: left;
-  font-size: 50px;
-}
-
-a {
-  color: red;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-a:hover {
-  color: yellow;
-}
-
-.sec {
-  font-size: 25px;
-  font-weight: bold;
-  padding: 0 20px;
-}
-
-/* Main content grows to fill space */
-main {
-  flex: 1;
+header ul {
   display: flex;
-  flex-direction: column;
-  justify-content: center; /* vertical center */
-  align-items: center;     /* horizontal center */
-  text-align: center;
+  list-style: none;
+  gap: 20px;
 }
 
-/* Heading style */
-.h1 {
-  font-size: 40px;
-  font-weight: bold;
-  margin-bottom: 30px;
-}
-
-/* Button styling */
-.hero {
-  padding: 15px 30px;
-  font-size: 20px;
+header ul li {
   cursor: pointer;
-  border: none;
-  border-radius: 5px;
-  background-color: red;
+  font-size: 14px;
+  color: #555;
+  transition: color 0.2s ease;
 }
 
-.hero a {
-  color: white;
-  text-decoration: none;
+header ul li:hover {
+  color: #fc8019;
 }
 
-.hero:hover {
-  background-color: darkred;
+/* Heading section */
+header h2 {
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: 500;
+  color: #222;
 }
 
-/* Footer fixed at bottom */
-.footer {
-  background-color: rgb(34, 34, 34);
-  color: white;
-  padding: 15px 0;
-  text-align: center;
+/* Search Box */
+.sc-koXPp {
+  margin: 30px auto;
+  width: 70%;
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-/*This is the css code of about*/
+.sc-bmzYkS {
+  flex-grow: 1;
+  padding: 12px 20px;
+  background-color: #fff;
+}
 
+.sc-aXZVg {
+  font-size: 15px;
+  color: #888;
+}
 
-.about-container {
+/* Search Icon */
+.sc-iHGNWf {
+  padding: 0 15px;
+  background-color: #fc8019;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 40px;
-  padding: 40px;
-  color: white;
-  max-width: 900px;
-  margin: 30px auto;
-  background-color: rgb(34, 34, 34);
-  border-radius: 10px;
 }
 
-.about-photo {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid red;
+.sc-iHGNWf svg {
+  fill: white;
 }
 
-.about-text {
-  max-width: 600px;
-}
-
-.about-text h1 {
-  font-size: 36px;
-  margin-bottom: 15px;
-  text-align: left;
-}
-
-.about-text p {
-  font-size: 18px;
-  line-height: 1.5;
-  margin-bottom: 25px;
-  text-align: left;
-}
-
-.about-text h2 {
-  font-size: 28px;
-  margin-bottom: 15px;
-  text-align: left;
-}
-
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.skill-badge {
-  background-color: red;
-  padding: 8px 15px;
-  border-radius: 20px;
-  font-weight: bold;
-  font-size: 16px;
-  cursor: default;
-  color: white;
-}
-.footer {
+/* Footer */
+footer {
   position: fixed;
   bottom: 0;
+  left: 0;
   width: 100%;
-  background-color: rgb(34, 34, 34);
-  color: white;
   text-align: center;
-  padding: 10px 0;
-  font-weight: bold;
+  padding: 20px;
+  background-color: #fafafa;
+  color: #777;
+  font-size: 14px;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+  z-index: 1000;
 }
 
-/*This is css for Contact.html*/
-/* Header Section */
-
-
-/* Contact Heading */
-.c {
-  text-align: center;
-  margin-top: 50px;
-  font-size: 70px;
-  font-weight: bold;
+main {
+  display: flex;
+  justify-content: center;  /* Center the images horizontally */
+  gap: 20px;                /* Space between images */
+  flex-wrap: wrap;          /* Wrap to next line on smaller screens */
+  padding: 20px;
 }
 
-/* Contact Info List */
-.a {
-  font-weight: bold;
-  font-size: 25px;
-  padding: 10px 20px;
+main a {
+  display: block;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+main a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+main img {
+  display: block;
+  width: 200px;    /* fixed width for images */
+  height: auto;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 8px;
 }
